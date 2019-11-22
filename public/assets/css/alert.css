@@ -1,0 +1,99 @@
+#news{
+    background: rgb(55, 58, 61);
+    color: #fff;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    min-height: 2.3rem;
+    align-items: center;
+    position: fixed;
+    bottom: 2.3rem;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#news2{
+    background: rgb(55, 58, 61);
+    color: #fff;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    min-height: 2.3rem;
+    bottom: 0;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.news-headline{
+    width: 100%;
+}
+
+.news-headline img{
+    max-width: 100%;
+}
+
+.newstag:nth-child(odd){
+    color: yellow;
+}
+
+.score{
+    display: flex;
+    justify-content: space-around;
+}
+
+.score div{
+    margin: 0 1rem;
+}
+
+.score-wrap{
+    background: rgb(1, 62, 119);
+    padding: 3px;
+    margin: 0 .6rem;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 15px;
+}
+
+.score-wrap2{
+    background: rgb(1, 62, 119);
+    font-size: .8rem;
+    padding: 3px;
+    margin: 0 .6rem;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.score-wrap2 a{
+    text-decoration: none;
+}
+.score-wrap a{
+    text-decoration: none;
+}
+
+.dark{
+    color: gray;
+    padding-left: .2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+#newsSlide{
+    min-height: 10rem;
+}
+
+.league-name{
+    padding: 5px;
+    border-radius: 10px;
+    background: green;
+    color: #fff;
+}

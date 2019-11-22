@@ -1,0 +1,280 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: bold;
+}
+
+.yellow{
+    color: rgb(200, 200, 24);
+}
+
+.green{
+    color: green;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgb(49, 49, 49);
+    height: 100vh;
+}
+
+h1,h2,h3,h4{
+    text-transform: uppercase;
+    color: #000;
+}
+
+
+header{
+    width: 100%;
+    min-height: 3rem;
+    text-align: center;
+    background: url(../../img/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+}
+.overlay{
+    background: rgba(0, 0, 0, 0.864);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* z-index: 1; */
+}
+.brand-logo{
+    margin: auto;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: .4rem;
+    z-index: 1;
+}
+
+.brand-logo a{
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.blinker{
+    animation-name: blink;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-direction: alternate-reverse;
+    animation-duration: 1s;
+}
+
+.blinker2{
+    animation-name: blink2;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    /* animation-direction: alternate; */
+    animation-duration: .7s;
+}
+
+sup{
+    width: .3rem;
+    height: .3rem;
+    padding: .3rem;
+    display: inline-block;
+    border-radius: 50%;
+    background: red;
+}
+
+.table h2{
+    text-align: center;
+    /* color: #fff; */
+    /* margin: 10px auto; */
+    font-size: 1rem;
+    color: #fff;
+}
+
+.match{
+    color: #fff;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    margin: auto;
+    padding:10px;
+    border-radius: 10px;
+    /* background: rgb(5, 5
+    , 5); */
+    font-size: .8rem;
+    margin: 0;
+}
+.match:nth-child(odd){
+    background: rgb(34, 33, 33);
+    margin: 4px auto;
+}
+
+.match .event-info{
+    color:#fff;
+    font-weight: bold;
+}
+
+.match a{
+    color: #fff;
+}
+
+.title{
+    width: 100%;
+    margin: .5rem auto;
+}
+
+.match > * {
+    text-align: center;
+}
+
+.league-role{
+    padding: 2rem 1rem;
+    background: rgb(40, 45, 46);
+    border-radius: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+
+/* sectional layout */
+.threeSectionalLayout{
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+}
+
+.threeSectionalLayout ul a .active{
+    color: #fff;
+}
+
+/* sidebar */
+
+.threeSectionalLayout .sidebar ul{
+    display: flex;
+    flex-direction: column;
+    background: rgb(65, 83, 87);
+    margin: 0 1rem;
+    border-radius: 20px;
+    margin-top: 1rem;
+    background: rgb(40, 45, 46);
+    padding: 10px;
+}
+
+.threeSectionalLayout .sidebar ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    justify-content: center;
+}
+
+.threeSectionalLayout .sidebar ul li{
+    margin: .6rem 0 0 1rem;
+    font-size: .7rem;
+}
+.threeSectionalLayout .sidebar ul li i{
+    color: green;
+}
+
+.threeSectionalLayout .sidebar ul a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+/* ads section */
+.threeSectionalLayout .ads-section{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
+    color: #fff;
+    padding: 10px;
+}
+
+.betcodes{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    color: #fff;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    padding: 7px;
+}
+
+.betcodes h4{
+    text-align: center;
+}
+
+.betcodes li{
+    margin-bottom: 1rem;
+    color: #fff;
+    font-size: .7rem;
+    text-align: center;
+}
+
+/* event detais */
+.event-details{
+    color: #fff;
+}
+
+.event-details table{
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}
+
+.event-details table thead{
+    border: 2px solid #000;
+    background: rgb(95, 94, 94);
+}
+
+/* footer */
+
+footer{
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-style: 1.3rem;
+    color: #fff;
+}
+
+@keyframes blink2 {
+    0%,100%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+
+}
+
+
+@keyframes blink{
+    0%, 100% {
+        color: green;
+    }
+    40%{
+        color: yellow;
+    }
+    60%{
+        color: red;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .threeSectionalLayout{
+        grid-template-columns: 100%;
+    }
+
+    .threeSectionalLayout .sidebar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem auto;
+        width: 100%;
+    }
+}

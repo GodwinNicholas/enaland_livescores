@@ -9,13 +9,11 @@
     color: rgb(200, 200, 24);
 }
 
-.green{
-    color: green;
-}
+
 
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background: rgb(49, 49, 49);
+    background: rgb(243, 240, 240);
     height: 100vh;
 }
 
@@ -99,17 +97,15 @@ sup{
 .match{
     color: #fff;
     display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-columns: 5% 15% 35% 20% 35%;
     margin: auto;
     padding:10px;
     border-radius: 10px;
-    /* background: rgb(5, 5
-    , 5); */
     font-size: .8rem;
     margin: 0;
 }
 .match:nth-child(odd){
-    background: rgb(34, 33, 33);
+    background: rgb(0, 0, 0);
     margin: 4px auto;
 }
 
@@ -133,9 +129,8 @@ sup{
 
 .league-role{
     padding: 2rem 1rem;
-    background: rgb(40, 45, 46);
-    border-radius: 20px;
-    max-height: 400px;
+    background: rgb(30, 44, 47);
+    max-height: 600px;
     overflow-y: auto;
 }
 
@@ -143,46 +138,13 @@ sup{
 /* sectional layout */
 .threeSectionalLayout{
     display: grid;
-    grid-template-columns: 20% 60% 20%;
+    grid-template-columns: 80% 20%;
 }
 
 .threeSectionalLayout ul a .active{
     color: #fff;
 }
 
-/* sidebar */
-
-.threeSectionalLayout .sidebar ul{
-    display: flex;
-    flex-direction: column;
-    background: rgb(65, 83, 87);
-    margin: 0 1rem;
-    border-radius: 20px;
-    margin-top: 1rem;
-    background: rgb(40, 45, 46);
-    padding: 10px;
-}
-
-.threeSectionalLayout .sidebar ul {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    justify-content: center;
-}
-
-.threeSectionalLayout .sidebar ul li{
-    margin: .6rem 0 0 1rem;
-    font-size: .7rem;
-}
-.threeSectionalLayout .sidebar ul li i{
-    color: green;
-}
-
-.threeSectionalLayout .sidebar ul a {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #fff;
-}
 
 /* ads section */
 .threeSectionalLayout .ads-section{
@@ -228,7 +190,7 @@ sup{
 
 .event-details table thead{
     border: 2px solid #000;
-    background: rgb(95, 94, 94);
+    background: rgb(143, 137, 137);
 }
 
 /* footer */

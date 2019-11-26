@@ -13,7 +13,7 @@ function init() {
             render(data);
 
             // render news
-            setTimeout(init, 2000);
+            setTimeout(init, 4000);
         })
 }
 

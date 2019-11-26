@@ -4,6 +4,7 @@ const expressLayouts = require("express-ejs-layouts");
 
 const port = process.env.port || 8000;
 
+
 const app = express();
 
 // MIDDLEWARES

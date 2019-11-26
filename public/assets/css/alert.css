@@ -1,5 +1,5 @@
 #news{
-    background: rgb(55, 58, 61);
+    background: rgb(7, 7, 7);
     color: #fff;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
@@ -15,7 +15,7 @@
 }
 
 #news2{
-    background: rgb(55, 58, 61);
+    background: rgb(2, 2, 2);
     color: #fff;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
@@ -81,7 +81,7 @@
 }
 
 .dark{
-    color: gray;
+    color: rgb(231, 224, 224);
     padding-left: .2rem;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
@@ -93,7 +93,38 @@
 
 .league-name{
     padding: 5px;
-    border-radius: 10px;
-    background: green;
+    background: rgb(1, 62, 119);
     color: #fff;
+}
+
+
+/* match details */
+.event-details table{
+    color: #fff;
+}
+
+.event-details table ul{
+    list-style: none;
+}
+
+.event-details table tr th{
+    background: #000;
+}
+
+.event-details table td {
+    text-align: center;
+}
+
+/* card */
+.ref-card{
+    width: 2rem;
+    height: 2rem;
+}
+
+.event-details .teams{
+    color: rgb(0, 162, 255);
+}
+
+.ss{
+    color: lightgreen;
 }

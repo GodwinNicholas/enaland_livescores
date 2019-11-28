@@ -15,12 +15,12 @@ function abbreviate(league) {
 // render initial data
 async function render(data) {
     let allMatchesHtml = ``;
+    let allMatchesHtml1 = ``;
     let allMarquees = ``;
     // loop through data and add to html
-    console.log(data.livescores[0])
     await data.livescores.forEach(l => {
         if (l.event_live === "1") {
-            allMatchesHtml += `<div class="match" key="${l.event_key}">
+            allMatchesHtml1 += `<div class="match" key="${l.event_key}">
             <div class="event-info">
                 <span class="green league-name"> ${abbreviate(l.league_name)} </span>
             </div>
@@ -63,7 +63,7 @@ async function render(data) {
         }
     });
 
-    matches1.innerHTML = allMatchesHtml;
+    matches1.innerHTML = allMatchesHtml1 + allMatchesHtml;
     marquee.innerHTML = allMarquees;
 
 }

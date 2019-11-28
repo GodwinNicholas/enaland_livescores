@@ -30,9 +30,32 @@
                                 <%= match.event_status %>
                             </td>
                             <td><%= match.event_home_team %></td>
-                            <td><%= match.event_score %></td>
+                            <td><%= match.event_final_result %></td>
                             <td><%= match.event_away_team %></td>
                         </tbody>
+
+                        <% if(odds != null){ %>
+                        <thead>
+                            <tr>
+                                <th>Betting Odds</th>
+                                <th>1</th>
+                                <th>X</th>
+                                <th>2</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <td></td>
+                            <td>
+                                <span class="p-2 bg-success text-white"><%= odds.odd_1 %></span>
+                            </td>
+                            <td>
+                                <span class="p-2 bg-success text-white"><%= odds.odd_x %></span>
+                            </td>
+                            <td>
+                                <span class="p-2 bg-success text-white"><%= odds.odd_2 %></span>
+                            </td>
+                        </tbody>
+                        <%}%>
 
                         <thead>
                             <tr>
@@ -44,26 +67,26 @@
                         </thead>
                         <tbody>
                             <% match.goalscorers.forEach(e => { %>
-                            <% if(e.home_scorer.length > 2){ %>
-                            <tr>
-                                <td>
-                                    <span class="timer"></span>
-                                    <%= e.time %>
-                                </td>
-                                <td><%= e.home_scorer%> <i class="fas fa-futbol"></i></td>
-                                <td><%= e.score %></td>
-                            </tr>
-                            <% } else { %>
-                            <tr>
-                                <td>
-                                    <span class="timer"></span>
-                                    <%= e.time %>
-                                </td>
-                                <td><%= e.score %></td>
-                                <td><%= e.away_scorer%> <i class="fas fa-futbol"></i></td>
-                            </tr>
-                            <% } %>
-                            <%})%>
+                        <% if(e.home_scorer.length > 2){ %>
+                        <tr>
+                            <td>
+                                <span class="timer"></span>
+                                <%= e.time %>
+                            </td>
+                            <td><%= e.home_scorer%> <i class="fas fa-futbol"></i></td>
+                            <td><%= e.score %></td>
+                        </tr>
+                        <% } else { %>
+                        <tr>
+                            <td>
+                                <span class="timer"></span>
+                                <%= e.time %>
+                            </td>
+                            <td><%= e.score %></td>
+                            <td><%= e.away_scorer%> <i class="fas fa-futbol"></i></td>
+                        </tr>
+                        <% } %>
+                        <%})%>
                         </tbody>
 
                         <thead>

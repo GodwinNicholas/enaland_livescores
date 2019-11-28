@@ -19,6 +19,7 @@ router.get("/", (req, res) => {
             })
             return data;
         }).then((data) => res.send(data))
+        .catch(err => console.log(err))
 });
 
 
@@ -41,6 +42,7 @@ router.get("/headline", (req, res) => {
             })
             return data;
         }).then((data) => res.send(data))
+        .catch(err => console.log(err))
 });
 
 

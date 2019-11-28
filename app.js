@@ -7,11 +7,22 @@ const port = process.env.port || 8000;
 
 const app = express();
 
+// livescores global var
+let livescore = "";
+
 // MIDDLEWARES
 app.use(expressLayouts);
 app.use(express.static("./public"));
 // config
 app.set("view engine", "ejs");
+
+// cors
+app.use((req, res, next) => {
+    req.livescores = livescore;
+    res.header('Access-Control-Allow-Origin', '*');
+    next();
+});
+
 
 // ROUTES
 app.use("/", require("./routes/indexRouter"));

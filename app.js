@@ -6,7 +6,6 @@ const port = process.env.port || 8000;
 
 
 const app = express();
-
 // livescores global var
 let livescore = "";
 
@@ -31,4 +30,6 @@ app.use("/info", require("./routes/info"));
 app.use("/api/livescores", require("./routes/api/livescoreApi"));
 app.use("/api/news", require("./routes/api/newsApi"));
 
-app.listen(port, () => console.log(`server started on port ${port}`));
+app.listen(port, () => {
+    console.log(`server started on port ${port}`);
+})

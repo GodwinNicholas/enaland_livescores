@@ -227,17 +227,18 @@ footer{
     }
 }
 
-/* @media screen and (max-width: 768px){
+@media screen and (max-width: 768px){
     .threeSectionalLayout{
-        grid-template-columns: 100%;
+        /* grid-template-columns: 100%; */
+        min-height: 100vh;
     }
 
-    .threeSectionalLayout .sidebar {
+    /* .threeSectionalLayout .sidebar {
         display: flex;
         align-items: center;
         justify-content: center;
         align-items: center;
         margin: 1rem auto;
         width: 100%;
-    }
-} */
+    } */
+}

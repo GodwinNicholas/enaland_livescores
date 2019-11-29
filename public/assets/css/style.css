@@ -227,7 +227,7 @@ footer{
     }
 }
 
-@media screen and (max-width: 768px){
+/* @media screen and (max-width: 768px){
     .threeSectionalLayout{
         grid-template-columns: 100%;
     }
@@ -240,4 +240,4 @@ footer{
         margin: 1rem auto;
         width: 100%;
     }
-}
+} */

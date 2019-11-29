@@ -131,7 +131,7 @@ sup{
 .league-role{
     padding: 2rem 1rem;
     background: rgb(30, 44, 47);
-    max-height: 600px;
+    max-height: 100vh;
     overflow-y: auto;
 }
 
@@ -227,11 +227,11 @@ footer{
     }
 }
 
-@media screen and (max-width: 768px){
-    .threeSectionalLayout{
-        /* grid-template-columns: 100%; */
+/* @media screen and (max-width: 768px){
+    threeSectionalLayout{
+         grid-template-columns: 100%;
         min-height: 100vh;
-    }
+    } */
 
     /* .threeSectionalLayout .sidebar {
         display: flex;
@@ -240,5 +240,5 @@ footer{
         align-items: center;
         margin: 1rem auto;
         width: 100%;
-    } */
-}
+    }
+} */

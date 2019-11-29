@@ -227,18 +227,9 @@ footer{
     }
 }
 
-/* @media screen and (max-width: 768px){
-    threeSectionalLayout{
-         grid-template-columns: 100%;
-        min-height: 100vh;
-    } */
-
-    /* .threeSectionalLayout .sidebar {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        align-items: center;
-        margin: 1rem auto;
-        width: 100%;
+@media screen and (max-width: 168px){
+    #ads{
+        width: 400px;
+        height: 150px;
     }
-} */
+}

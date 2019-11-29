@@ -27,9 +27,13 @@ async function render(data) {
             <div class="">${l.event_status.replace(/half time/gi, "HT").replace(/finished/gi, "FT").replace(/postponed/gi, "PP")}
                 <span class="blinker2"> ${l.event_status.length > 5 ? "" : "'"} </span>
             </div>
-            <div class="home yellow ${l.goalscorers.length > 0 && l.goalscorers[l.goalscorers.length - 1].home_scorer.length > 0 ? "ss" : ""}">${l.event_home_team}</div>
+            <div class="home yellow ${l.goalscorers.length > 0 && l.goalscorers[l.goalscorers.length - 1].home_scorer.length > 0 ? "ss" : ""}">${l.event_home_team} 
+            ${l.goalscorers.length > 0 && l.goalscorers[l.goalscorers.length - 1].home_scorer.length > 0 ? '<i class="text-white mx-1 fas fa-futbol"> ' + l.goalscorers[l.goalscorers.length - 1].home_scorer + '</i>' : ""}
+            </div>
             <div class="score-wrap2"><a href="/info/${l.event_key}">${l.event_final_result} ${l.event_halftime_result ? " <span class='dark'>" + " (" + l.event_halftime_result + "<span/>" + ")" : ""}</a></div>
-            <div class="away yellow ${l.goalscorers.length > 0 && l.goalscorers[l.goalscorers.length - 1].away_scorer.length > 0 ? "ss" : ""}">${l.event_away_team}</div>
+            <div class="away yellow ${l.goalscorers.length > 0 && l.goalscorers[l.goalscorers.length - 1].away_scorer.length > 0 ? "ss" : ""}">${l.event_away_team}
+            ${l.goalscorers.length > 0 && l.goalscorers[l.goalscorers.length - 1].away_scorer.length > 0 ? '<i class="text-white mx-1 fas fa-futbol"> ' + l.goalscorers[l.goalscorers.length - 1].home_scorer + '</i>' : ""}
+            </div>
             <div></div>
         </div>
         `;

@@ -16,7 +16,6 @@ function abbreviate(league) {
 async function render(data) {
     let allMatchesHtml = ``;
     let allMatchesHtml1 = ``;
-    let allMarquees = ``;
     // loop through data and add to html
     await data.livescores.forEach(l => {
         if (l.event_live === "1") {

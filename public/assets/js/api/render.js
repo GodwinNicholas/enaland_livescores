@@ -22,9 +22,10 @@ async function render(data) {
         if (l.event_live === "1") {
             allMatchesHtml1 += `<div class="match" key="${l.event_key}">
             <div class="event-info">
-                <span class="green league-name"> ${abbreviate(l.league_name)} </span>
+                <span class="green league-name"> <i class="fas"> ${abbreviate(l.league_name)}</i> </span>
             </div>
-            <div class="">${l.event_status.replace(/half time/gi, "HT").replace(/finished/gi, "FT").replace(/postponed/gi, "PP")}
+            <div class="">
+            <i class="fas">${l.event_status.replace(/half time/gi, "HT").replace(/finished/gi, "FT").replace(/postponed/gi, "PP")}</i>
                 <span class="blinker2"> ${l.event_status.length > 5 ? "" : "'"} </span>
             </div>
             <div class="home yellow ${l.goalscorers.length > 0 && l.goalscorers[l.goalscorers.length - 1].home_scorer.length > 0 ? "ss" : ""}">
@@ -43,9 +44,10 @@ async function render(data) {
         else {
             allMatchesHtml += `<div class="match" key="${l.event_key}">
             <div class="event-info">
-                <span class="green league-name"> ${abbreviate(l.league_name)} </span>
+                <span class="green league-name"> <i fas="fas">${abbreviate(l.league_name)}</i> </span>
             </div>
-            <div class="">${l.event_status ? l.event_status.replace(/half time/gi, "HT").replace(/finished/gi, "FT").replace(/postponed/gi, "PP") : l.event_time}
+            <div class="">
+            <i class="fas">${l.event_status ? l.event_status.replace(/half time/gi, "HT").replace(/finished/gi, "FT").replace(/postponed/gi, "PP") : l.event_time}</i>
             </div>
             <div class="home yellow">
             <i class="fas">${ l.event_home_team}</i>

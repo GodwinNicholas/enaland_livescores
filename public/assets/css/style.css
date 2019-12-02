@@ -239,7 +239,7 @@ footer{
         width: 400px;
         height: 150px;
     }
-    .match > *{
+    .match > div{
         font-size: 23px;
     }
 }

@@ -46,7 +46,7 @@ async function render(data) {
             </div>
             <div class="">${l.event_status ? l.event_status.replace(/half time/gi, "HT").replace(/finished/gi, "FT").replace(/postponed/gi, "PP") : l.event_time}
             </div>
-            <div class="home yellow">${ l.event_home_team}</div>
+            <div class="home yellow"><p>${ l.event_home_team}</p></div>
             <div class="score-wrap2"><a href="/info/${l.event_key}">${l.event_final_result} ${l.event_halftime_result ? " <span class='dark'>" + " (" + l.event_halftime_result + "<span/>" + ")" : ""}</a></div>
             <div class="away yellow">${ l.event_away_team}</div>
             <div></div>

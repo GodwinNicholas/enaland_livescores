@@ -239,4 +239,7 @@ footer{
         width: 400px;
         height: 150px;
     }
+    .match > *{
+        font-size: 1.5rem;
+    }
 }

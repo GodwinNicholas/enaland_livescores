@@ -55,21 +55,21 @@ async function render(data) {
         }
     });
 
-    await data.livescores.forEach(l => {
-        if (l.event_live == 1) {
-            allMarquees += `
-            <div>${l.event_home_team}</span><span class="score-wrap"><span>${l.event_final_result[0]}</span>:<span>${l.event_final_result[l.event_final_result.length - 1]}</span></span><span>${l.event_away_team}</div>
-            `;
-        }
-        else {
-            allMarquees += `
-            <div>${l.event_home_team}</span><span class="score-wrap"><span>-</span>:<span>-</span></span><span>${l.event_away_team}</div>
-            `;
-        }
-    });
+    // await data.livescores.forEach(l => {
+    //     if (l.event_live == 1) {
+    //         allMarquees += `
+    //         <div>${l.event_home_team}</span><span class="score-wrap"><span>${l.event_final_result[0]}</span>:<span>${l.event_final_result[l.event_final_result.length - 1]}</span></span><span>${l.event_away_team}</div>
+    //         `;
+    //     }
+    //     else {
+    //         allMarquees += `
+    //         <div>${l.event_home_team}</span><span class="score-wrap"><span>-</span>:<span>-</span></span><span>${l.event_away_team}</div>
+    //         `;
+    //     }
+    // });
 
     matches1.innerHTML = allMatchesHtml1 + allMatchesHtml;
-    marquee.innerHTML = allMarquees;
+    // marquee.innerHTML = allMarquees;
 
 }
 

@@ -9,8 +9,8 @@ let isShowingNews = 0;
 // show full news
 showFullNews();
 async function showFullNews() {
-    // const api_uri2 = "https://192.168.43.93:8000/api/news/headline";
-    const api_uri2 = "https://livescores.enaland.com/api/news/headline";
+    const api_uri2 = "https://192.168.43.93:8000/api/news/headline";
+    // const api_uri2 = "https://livescores.enaland.com/api/news/headline";
     fetch(api_uri2)
         .then(res => {
             return res.json()

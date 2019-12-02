@@ -1,8 +1,8 @@
 import render from './render.js';
 // import update from './update';
 
-const api_uri = `http://192.168.43.93:8000/api/livescores`
-// const api_uri = `https://livescores.enaland.com/api/livescores`
+// const api_uri = `http://192.168.43.93:8000/api/livescores`
+const api_uri = `https://livescores.enaland.com/api/livescores`
 
 function init() {
     const res = fetch(api_uri)

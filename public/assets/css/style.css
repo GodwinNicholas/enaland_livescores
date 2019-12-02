@@ -98,7 +98,7 @@ sup{
 .match{
     color: #fff;
     display: grid;
-    grid-template-columns: 5% 5% 35% 20% 35%;
+    grid-template-columns: 5% 8% 35% 17% 35%;
     margin: auto;
     padding:10px;
     border-radius: 10px;

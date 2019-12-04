@@ -146,7 +146,7 @@ sup{
 /* sectional layout */
 .threeSectionalLayout{
     display: grid;
-    grid-template-columns: 15% 65% 20%;
+    grid-template-columns: 70% 30%;
 }
 
 .threeSectionalLayout ul a .active{

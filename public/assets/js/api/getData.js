@@ -2,14 +2,14 @@ import render from './render.js';
 // import update from './update';
 
 
-const live_url = "https://livescores.enaland.com/";
-const local_url = "https://livescores.enaland.com/";
+const live_url = "https://livescores.enaland.com/api/livescores";
+const local_url = "192.168.43.93:8000/api/livescores";
 
-const api_uri = live_url;
+const api_uri = local_url;
 // const api_uri = `https://livescores.enaland.com/api/livescores`
 
 function init() {
-    const res = fetch(api_uri)
+    fetch(api_uri)
         .then(res => {
             return res.json()
         })
@@ -18,7 +18,7 @@ function init() {
             render(data);
 
             // render news
-            setTimeout(init, 10000);
+            setTimeout(init, 5000);
         })
 }
 

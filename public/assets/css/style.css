@@ -6,9 +6,12 @@
     font-family: 'Muli', sans-serif;
 }
 
+body{
+    background: rgb(14, 172, 184);
+}
 
 .yellow{
-    color: rgb(212, 105, 17) !important;
+    color: yellow !important;
     font-size: .8rem !important;
     font-weight: lighter;
 }
@@ -23,7 +26,7 @@
 
 
 body{
-    background: rgb(243, 240, 240);
+    background: rgb(255, 254, 254);
     height: 100vh;
 }
 
@@ -98,8 +101,6 @@ sup{
 
 .table h2{
     text-align: center;
-    /* color: #fff; */
-    /* margin: 10px auto; */
     font-size: 1rem;
     color: #fff;
 }
@@ -107,21 +108,19 @@ sup{
 .match{
     color: #fff;
     display: grid;
-    grid-template-columns: 5% 8% 35% 17% 35%;
-    margin: auto;
-    padding:10px;
+    padding: 0;
+    grid-template-columns: 6% 11% 37% 10% 37%;
     border-radius: 10px;
     font-size: .8rem;
-    margin: 0;
 }
 .match:nth-child(odd){
     /* background: rgb(0, 0, 0); */
-    background: rgb(26, 18, 75);
+    background: rgb(56, 56, 56);
     margin: 4px auto;
 }
 .match:nth-child(even){
     /* background: rgb(0, 0, 0); */
-    background: rgb(19, 64, 70);
+    background: rgb(55, 62, 63);
     margin: 4px auto;
 }
 
@@ -131,7 +130,7 @@ sup{
 }
 
 .match a{
-    color: #fff;
+    color: rgb(255, 255, 255);
 }
 
 .title{
@@ -144,9 +143,7 @@ sup{
 }
 
 .league-role{
-    padding: 2rem 1rem;
-    /* background: rgb(30, 44, 47); */
-    /* background: #fff; */
+    padding:0 1rem;
     max-height: 100vh;
     overflow-y: auto;
 }
@@ -155,7 +152,7 @@ sup{
 /* sectional layout */
 .threeSectionalLayout{
     display: grid;
-    grid-template-columns: 70% 30%;
+    grid-template-columns: 75% 25%;
 }
 
 .threeSectionalLayout ul a .active{

@@ -21,20 +21,23 @@ async function render(data) {
         if (l.event_live === "1") {
             allMatchesHtml1 += `<div class="match" key="${l.event_key}">
             <div class="event-info">
-                <span class="green league-name"> <i class="fas"> ${abbreviate(l.league_name)}</i> </span>
+                <span class="green league-name"> <p class="normal"> ${abbreviate(l.league_name)}</p> </span>
             </div>
-            <div class="">
-            <i class="fas">${l.event_status.replace(/half time/gi, "HT").replace(/finished/gi, "FT").replace(/postponed/gi, "PP")}</i>
-                <span class="blinker2"> ${l.event_status.length > 5 ? "" : "'"} </span>
+            <div class="game-time">
+            <p class="normal">${l.event_status.replace(/half time/gi, "HT").replace(/finished/gi, "FT").replace(/postponed/gi, "PP")}
+            <span class="blinker2"> ${l.event_status.length > 5 ? "" : "'"} </span>
+            </p> 
             </div>
-            <div class="home yellow ${l.goalscorers.length > 0 && l.goalscorers[l.goalscorers.length - 1].home_scorer.length > 0 ? "ss" : ""}">
-            <i class="fas gf">${l.event_home_team} </i>
+            <div class="home ${l.goalscorers.length > 0 && l.goalscorers[l.goalscorers.length - 1].home_scorer.length > 0 ? "ss" : ""}">
+            <p class="normal">${l.event_home_team} 
             ${l.goalscorers.length > 0 && l.goalscorers[l.goalscorers.length - 1].home_scorer.length > 0 ? '<i class=" yellow mx-1 fas fa-futbol"> ' + l.goalscorers[l.goalscorers.length - 1].home_scorer + '</i>' : ""}
+            </p>
             </div>
             <div class="score-wrap2"><a href="/info/${l.event_key}">${l.event_final_result} ${l.event_halftime_result ? " <span class='dark'>" + " (" + l.event_halftime_result + "<span/>" + ")" : ""}</a></div>
-            <div class="away yellow ${l.goalscorers.length > 0 && l.goalscorers[l.goalscorers.length - 1].away_scorer.length > 0 ? "ss" : ""}">
+            <div class="away ${l.goalscorers.length > 0 && l.goalscorers[l.goalscorers.length - 1].away_scorer.length > 0 ? "ss" : ""}">
+            <p class="normal">
             ${l.goalscorers.length > 0 && l.goalscorers[l.goalscorers.length - 1].away_scorer.length > 0 ? '<i class=" yellow mx-1 fas fa-futbol"> ' + l.goalscorers[l.goalscorers.length - 1].away_scorer + '</i>' : ""}
-            <i class="fas gf">${l.event_away_team}</i>
+            ${l.event_away_team}</p>
             </div>
             <div></div>
         </div>
@@ -43,17 +46,17 @@ async function render(data) {
         else {
             allMatchesHtml += `<div class="match" key="${l.event_key}">
             <div class="event-info">
-                <span class="green league-name"> <i fas="fas">${abbreviate(l.league_name)}</i> </span>
+                <span class="green league-name"> <p class="normal">${abbreviate(l.league_name)}</p> </span>
             </div>
-            <div class="">
-            <i class="fas">${l.event_status ? l.event_status.replace(/half time/gi, "HT").replace(/finished/gi, "FT").replace(/postponed/gi, "PP") : l.event_time}</i>
+            <div class="game-time">
+            <p class="normal">${l.event_status ? l.event_status.replace(/half time/gi, "HT").replace(/finished/gi, "FT").replace(/postponed/gi, "PP") : l.event_time}</p>
             </div>
             <div class="home gf">
-            <i class="fas">${ l.event_home_team}</i>
+            <p class="normal">${ l.event_home_team}</p>
             </div>
             <div class="score-wrap2"><a href="/info/${l.event_key}">${l.event_final_result} ${l.event_halftime_result ? " <span class='dark'>" + " (" + l.event_halftime_result + "<span/>" + ")" : ""}</a></div>
             <div class="away gf">
-            <i class="fas">${ l.event_away_team}</i>
+            <p class="normal">${ l.event_away_team}</p>
             </div>
             <div></div>
         </div>
@@ -61,21 +64,7 @@ async function render(data) {
         }
     });
 
-    // await data.livescores.forEach(l => {
-    //     if (l.event_live == 1) {
-    //         allMarquees += `
-    //         <div>${l.event_home_team}</span><span class="score-wrap"><span>${l.event_final_result[0]}</span>:<span>${l.event_final_result[l.event_final_result.length - 1]}</span></span><span>${l.event_away_team}</div>
-    //         `;
-    //     }
-    //     else {
-    //         allMarquees += `
-    //         <div>${l.event_home_team}</span><span class="score-wrap"><span>-</span>:<span>-</span></span><span>${l.event_away_team}</div>
-    //         `;
-    //     }
-    // });
-
     matches1.innerHTML = allMatchesHtml1 + allMatchesHtml;
-    // marquee.innerHTML = allMarquees;
 
 }
 

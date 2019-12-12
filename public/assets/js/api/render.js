@@ -33,7 +33,7 @@ async function render(data) {
             ${l.goalscorers.length > 0 && l.goalscorers[l.goalscorers.length - 1].home_scorer.length > 0 ? '<i class=" yellow mx-1 fas fa-futbol"> ' + l.goalscorers[l.goalscorers.length - 1].home_scorer + '</i>' : ""}
             </p>
             </div>
-            <div class="score-wrap2"><a href="/info/${l.event_key}">${l.event_final_result} ${l.event_halftime_result ? " <span class='dark'>" + " (" + l.event_halftime_result + "<span/>" + ")" : ""}</a></div>
+            <div class="score-wrap2"><a onclick="openLink()" href="/info/${l.event_key}">${l.event_final_result} ${l.event_halftime_result ? " <span class='dark'>" + " (" + l.event_halftime_result + "<span/>" + ")" : ""}</a></div>
             <div class="away ${l.goalscorers.length > 0 && l.goalscorers[l.goalscorers.length - 1].away_scorer.length > 0 ? "ss" : ""}">
             <p class="normal">
             ${l.goalscorers.length > 0 && l.goalscorers[l.goalscorers.length - 1].away_scorer.length > 0 ? '<i class=" yellow mx-1 fas fa-futbol"> ' + l.goalscorers[l.goalscorers.length - 1].away_scorer + '</i>' : ""}
@@ -54,7 +54,7 @@ async function render(data) {
             <div class="home gf">
             <p class="normal">${ l.event_home_team}</p>
             </div>
-            <div class="score-wrap2"><a href="/info/${l.event_key}">${l.event_final_result} ${l.event_halftime_result ? " <span class='dark'>" + " (" + l.event_halftime_result + "<span/>" + ")" : ""}</a></div>
+            <div class="score-wrap2"><a onclick="openLink()" href="/info/${l.event_key}">${l.event_final_result} ${l.event_halftime_result ? " <span class='dark'>" + " (" + l.event_halftime_result + "<span/>" + ")" : ""}</a></div>
             <div class="away gf">
             <p class="normal">${ l.event_away_team}</p>
             </div>

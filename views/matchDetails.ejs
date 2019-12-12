@@ -28,7 +28,7 @@
             <div class="league-role">
                 <div>
                     <table>
-                        <thead>
+                        <thead class="text-white">
                             <tr>
                                 <th><%= match.country_name %></th>
                                 <th><%= match.league_name %></th>
@@ -36,7 +36,7 @@
                                 <th><%= match.event_date %></th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="text-white">
                             <td>
                                 <span class="timer"></span>
                                 <%= match.event_status %>
@@ -47,7 +47,7 @@
                         </tbody>
 
                         <% if(odds != null){ %>
-                        <thead>
+                        <thead class="text-white">
                             <tr>
                                 <th>Betting Odds</th>
                                 <th>1</th>
@@ -55,7 +55,7 @@
                                 <th>2</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="text-white">
                             <td>
                                 <p>
                                     <a
@@ -78,7 +78,7 @@
                         </tbody>
                         <%}%>
 
-                        <thead>
+                        <thead class="text-white">
                             <tr>
                                 <th>Match Details: Goals</th>
                                 <th></th>
@@ -86,7 +86,7 @@
                                 <th></th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="text-white">
                             <% match.goalscorers.forEach(e => { %>
                         <% if(e.home_scorer.length > 2){ %>
                         <tr>
@@ -98,7 +98,7 @@
                             <td><%= e.score %></td>
                         </tr>
                         <% } else { %>
-                        <tr>
+                        <tr class="text-white">
                             <td>
                                 <span class="timer"></span>
                                 <%= e.time %>
@@ -110,7 +110,7 @@
                         <%})%>
                         </tbody>
 
-                        <thead>
+                        <thead class="text-white">
                             <tr>
                                 <th>Match Details: Cards</th>
                                 <th></th>
@@ -118,7 +118,7 @@
                                 <th></th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="text-white">
                             <% match.cards.forEach(e => { %>
                             <% if(e.home_fault.length > 2){ %>
                             <tr>
@@ -134,7 +134,7 @@
                                 <td>Home</td>
                             </tr>
                             <% } else{ %>
-                            <tr>
+                            <tr class="text-white">
                                 <td>
                                     <span class="timer"></span>
                                     <%= e.time %>
@@ -149,7 +149,7 @@
                             <% }) %>
                         </tbody>
 
-                        <thead>
+                        <thead class="text-white">
                             <tr>
                                 <th>Line ups:</th>
                                 <th></th>
@@ -157,7 +157,7 @@
                                 <th></th>
                             </tr>
                         </thead>
-                        <tbody class="teams">
+                        <tbody class="teams text-white">
                             <td>
                                 <ul>
                                     <% match.lineups.home_team.starting_lineups.forEach(e => {%>
@@ -187,7 +187,7 @@
                         <div>
                             <% if(match.statistics.length > 0){%>
                             <% match.statistics.forEach(e => { %>
-                            <div class="row">
+                            <div class="row text-white">
                                 <p class="text-white col-sm-1"><%= e.home %></p>
                                 <div class="col-sm-4">
                                     <div class="progress">

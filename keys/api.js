@@ -1,3 +1,3 @@
 module.exports = {
-    football_api: "a353e4258311b8c7b0b3995e8ad3b5fea2b633427a2cde41a41a82f99f26cd5a"
+    football_api: "3916eed8e2679de33a266c9c5b5302873b4432e442254f33d6846acd418230ac"
 };

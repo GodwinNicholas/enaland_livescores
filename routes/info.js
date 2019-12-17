@@ -7,7 +7,7 @@ router.get("/:id", async (req, res) => {
     // API CALL
     const oddURI = `https://allsportsapi.com/api/football/?&met=Odds&matchId=${id}&APIkey=${API_KEY}`;
     // const tableURI = `https://allsportsapi.com/api/football/?&met=Standings&leagueId=${195}&APIkey=${API_KEY}`;
-    const url1 = `https://allsportsapi.com/api/football/?met=Fixtures&APIkey=${API_KEY}&from=${new Date().getFullYear()}-${new Date().getMonth() + 1}-${new Date().getDate()}&to=${new Date().getFullYear()}-${new Date().getMonth() + 1}-${new Date().getDate()}&matchId=${id}`;
+    const url1 = `https://allsportsapi.com/api/football/?met=Fixtures&APIkey=${API_KEY}&matchId=${id}`;
 
 
     try {

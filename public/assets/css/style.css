@@ -109,7 +109,7 @@ sup{
     color: #fff;
     display: grid;
     padding: 0;
-    grid-template-columns: 6% 11% 37% 10% 37%;
+    grid-template-columns: 9% 15% 30% 16% 30%;
     border-radius: 10px;
     font-size: .8rem;
 }

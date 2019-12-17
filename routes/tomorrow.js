@@ -16,12 +16,12 @@ function abbreviate(league) {
 // home route
 router.get("/", async (req, res) => {
     const date = new Date();
-    date.setDate(date.getDate() - 1);
+    date.setDate(date.getDate() + 1);
     // API CALL
     const url3 = `https://allsportsapi.com/api/football/?met=Fixtures&APIkey=${API_KEY}&from=${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}&to=${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
     rp.get(url3)
         .then(async response => {
-            let unsorted = JSON.parse(response).result
+            let unsorted = JSON.parse(response).result;
             // compare func
             function compare(a, b) {
                 m1 = new Date(`${date.toDateString()} ${a.event_time}:0`);
@@ -40,7 +40,7 @@ router.get("/", async (req, res) => {
                 e.color = "#" + intoRGB(hashCode(e.league_name.split(" ")[0]));
             });
             const matches = await unsorted.sort(compare);
-            return res.render('yesterday', { matches, abbreviate })
+            return res.render('tomorrow', { matches, abbreviate })
         }).catch(err => console.log(err));
 });
 

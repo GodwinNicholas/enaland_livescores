@@ -27,6 +27,7 @@ app.use((req, res, next) => {
 app.use("/", require("./routes/indexRouter"));
 app.use("/info", require("./routes/info"));
 app.use("/yesterday", require("./routes/yesterday"));
+app.use("/tomorrow", require("./routes/tomorrow"));
 // api routes
 app.use("/api/livescores", require("./routes/api/livescoreApi"));
 app.use("/api/news", require("./routes/api/newsApi"));

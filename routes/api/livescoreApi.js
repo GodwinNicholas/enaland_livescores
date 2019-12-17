@@ -1,7 +1,8 @@
 const router = require("express").Router();
 const rp = require("request-promise");
 const API_KEY = require("../../keys/api").football_api;
-
+const intoRGB = require("../../utilities/intoRGB");
+const hashCode = require("../../utilities/hashCode");
 
 // home route
 router.get("/", async (req, res) => {
@@ -26,6 +27,9 @@ router.get("/", async (req, res) => {
             }
             // sort
             // const livescores = await unsorted.sort(compare);
+            await unsorted.forEach(e => {
+                e.color = "#" + intoRGB(hashCode(e.league_name.split(" ")[0]));
+            });
             const livescores = await unsorted.sort(compare);
             return res.send({ livescores })
         }).catch(err => console.log(err));

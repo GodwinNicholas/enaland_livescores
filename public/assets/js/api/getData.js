@@ -5,7 +5,7 @@ import render from './render.js';
 const live_url = "https://livescores.enaland.com/api/livescores";
 const local_url = "http://192.168.43.93:8000/api/livescores";
 
-const api_uri = live_url;
+const api_uri = local_url;
 
 function init() {
     fetch(api_uri)

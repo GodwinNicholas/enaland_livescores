@@ -21,7 +21,7 @@ async function render(data) {
         if (l.event_live === "1") {
             allMatchesHtml1 += `<div class="match" key="${l.event_key}">
             <div class="event-info">
-                <span class="green league-name"> <p class="normal"> ${abbreviate(l.league_name)}</p> </span>
+                <span class="green league-name"> <p class="normal" style="background-color:${ l.color}"> ${abbreviate(l.league_name)}</p> </span>
             </div>
             <div class="game-time">
             <p class="normal">${l.event_status.replace(/half time/gi, "HT").replace(/finished/gi, "FT").replace(/postponed/gi, "PP")}
@@ -46,7 +46,7 @@ async function render(data) {
         else {
             allMatchesHtml += `<div class="match" key="${l.event_key}">
             <div class="event-info">
-                <span class="green league-name"> <p class="normal">${abbreviate(l.league_name)}</p> </span>
+                <span class="green league-name"> <p class="normal" style="background-color:${ l.color}">${abbreviate(l.league_name)}</p> </span>
             </div>
             <div class="game-time">
             <p class="normal">${l.event_status ? l.event_status.replace(/half time/gi, "HT").replace(/finished/gi, "FT").replace(/postponed/gi, "PP") : l.event_time}</p>

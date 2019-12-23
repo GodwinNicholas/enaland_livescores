@@ -47,3 +47,47 @@
     widows: 1.4rem;
     height: 1.6rem;
 }
+
+.free-games {
+    padding: 1rem;
+    margin: 1rem .4rem;
+    background: rgb(21, 80, 82);
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.free-games h3{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    animation-name: blinks;
+    animation-duration: .5s;
+    animation-timing-function: ease;
+    animation-direction: alternate;
+    opacity: 0;
+    animation-iteration-count: infinite;
+    color: rgb(253, 240, 186);
+}
+
+
+.free-games .dot{
+    padding: 5px;
+    width: .4rem;
+    height: .4rem;
+    border-radius: 50%;
+    background: rgb(253, 240, 186);
+    display: inline-block;
+}
+
+
+.free-games ul{
+    list-style: none;
+}
+
+@keyframes blinks {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

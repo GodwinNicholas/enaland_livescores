@@ -1,5 +1,5 @@
 .league-name{
-    color: yellow;
+    color: #000;
 }
 
 .dark{
@@ -15,20 +15,32 @@
 }
 
 .game-time{
-    background: #000;
+    background: rgb(5, 46, 87);
+    color: #fff !important;
 }
 
 .score-wrap2{
-    background: #000;
+    background:rgb(5, 46, 87);
     margin: 0 .5em;
     display: flex;
     align-items: center;
     text-align: center;
     justify-content: center;
+    border-radius: 20px;
+    word-wrap: none;
 }
 
 .event-info{
-    background: #000;
+
+    position: relative;
+    width: 100%;
+}
+
+.event-info span{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
 .ref-card{

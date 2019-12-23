@@ -19,9 +19,10 @@ async function render(data) {
     // loop through data and add to html
     await data.livescores.forEach(l => {
         if (l.event_live === "1") {
-            allMatchesHtml1 += `<div class="match" key="${l.event_key}">
+            allMatchesHtml1 += `
+            <div class="match" key="${l.event_key}">
             <div class="event-info">
-                <span class="green league-name"> <p class="normal" style="background-color:${ l.color}"> ${l.country_name} ${abbreviate(l.league_name)}</p> </span>
+                <span class="green league-name" style="background-color:${ l.color}"> ${l.country_name} ${abbreviate(l.league_name)}</span>
             </div>
             <div class="game-time">
             <p class="normal">${l.event_status.replace(/half time/gi, "HT").replace(/finished/gi, "FT").replace(/postponed/gi, "PP")}
@@ -44,9 +45,11 @@ async function render(data) {
         `;
         }
         else {
-            allMatchesHtml += `<div class="match" key="${l.event_key}">
+            allMatchesHtml += `
+            
+            <div class="match" key="${l.event_key}">
             <div class="event-info">
-                <span class="green league-name"> <p class="normal" style="background-color:${ l.color}">${l.country_name} ${abbreviate(l.league_name)}</p> </span>
+            <span class="green league-name" style="background-color:${ l.color}"> ${l.country_name} ${abbreviate(l.league_name)}</span>
             </div>
             <div class="game-time">
             <p class="normal">${l.event_status ? l.event_status.replace(/half time/gi, "HT").replace(/finished/gi, "FT").replace(/postponed/gi, "PP") : l.event_time}</p>
